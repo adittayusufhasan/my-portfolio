@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/perfil.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/perfil.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/perfil.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/perfil.png" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/favicons/perfil.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a789d4">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title> Aditta's World </title>
+
+
+
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <!---------------------------- Loader ------------------------>
+<div id="loader">
+  <div class="loader-content">
+    <!-- Lottie Animation -->
+    <div class="services__modal-video-wrapper">
+      <script
+        src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+        type="module"
+      ></script>
+
+      <dotlottie-wc
+        src="https://lottie.host/20d1b021-820a-4fda-8df4-50659a82fd84/osaDTYkPVx.lottie"
+        style="width: 500px; height: 500px;"
+        autoplay
+        loop
+      ></dotlottie-wc>
+    </div>
+
+    <!-- Loading Bar -->
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+    <div class="loading-percentage">0%</div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    const loadingBar = document.querySelector('.loading-bar');
+    const percentageText = document.querySelector('.loading-percentage');
+
+    let percent = 0;
+    const duration = 3000; // 3.5 seconds total
+    const intervalTime = duration / 100; // ms per percent
+
+    const interval = setInterval(() => {
+      percent++;
+      loadingBar.style.width = percent + '%';
+      percentageText.textContent = percent + '%';
+
+      if (percent >= 100) {
+        clearInterval(interval);
+        // fade out loader
+        loader.classList.add('hidden');
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 500); // matches CSS fade
+      }
+    }, intervalTime);
+  });
+</script>
+
+
+    
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ADITTA</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== theme change button ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
+        </nav>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">Yusuf Hasan Aditta</h1>
+                    <h3 class="home__education">Storyteller, Cinematographer, Designer <br> and many more things that cannot be said to the end.</h3>
+
+                    <div class="home__button">
+                        <a href="https://drive.google.com/uc?export=download&id=1vHeaL-0vlRJ2bpS7DnByv2CSQhpUgNGZ" class="button button--ghost" download>
+    Download CV
+</a>
+
+
+                        <a href="#about" class="button">About</a>
+                    </div>
+                </div>
+
+   <div class="home__button">
+                        
+<div class="home__handle">
+  <img src="assets/img/perfil.png" alt="" class="home__img" id="profileImage">
+</div>
+
+<style>
+.home__handle {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 300px; /* you can adjust */
+  height: 250;
+  border: 4px solid #00ffc8; /* your frame border */
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Image styling */
+.home__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* Optional glow on hover (only frame glows slightly) */
+.home__handle:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.6);
+}
+</style>
+
+<script>
+const img = document.getElementById('profileImage');
+const container = document.querySelector('.home__handle');
+
+container.addEventListener('mousemove', (e) => {
+  const rect = container.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width - 0.5;
+  const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+  // Image moves slightly inside frame
+  const moveX = x * 20; // adjust for stronger movement
+  const moveY = y * 20;
+
+  img.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.1)`;
+  img.style.filter = 'brightness(1.15)';
+});
+
+container.addEventListener('mouseleave', () => {
+  img.style.transform = 'translate(0, 0) scale(1)';
+  img.style.filter = 'brightness(1)';
+});
+</script>
+                <div class="home__social">
+                    <a href="#" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="#" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="#" target="_blank" class="home__social-link">
+                        <i class='bx bxl-dribbble'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+
+            <div class="about__container container grid">
+                <img src="assets/img/about.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <i class='bx bx-award about__icon'></i>
+                            <h3 class="about__title">Experience</h3>
+                            <span class="about__subtitle">4 Years Working</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-briefcase-alt about__icon'></i>
+                            <h3 class="about__title">Completed</h3>
+                            <span class="about__subtitle">8+ Projects</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-support about__icon'></i>
+                            <h3 class="about__title">Support</h3>
+                            <span class="about__subtitle">Online 24/7</span>
+                        </div>
+                    </div>
+
+                    <p class="about__description">
+                        I am Yusuf Hasan Aditta, a dreamer who wants to become many things, which is why I can't focus on anything for long. Now I am making a website, tomorrow you might see me making a short film, or I might suddenly start writing a story—I can't give any certainty about that.
+
+                    </p>
+
+                    <a href="#contact" class="button about__button-contact">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <span class="section__subtitle">My Abilities</span>
+            <h2 class="section__title">My Experience</h2>
+
+
+            
+            <div class="skills__container container grid">
+                
+                <div class="skills__content">
+                    <h3 class="skills__title">Live Skills</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group" >
+
+<div class="skills__data" data-percent="90">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">HTML</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+
+<div class="skills__data" data-percent="65">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">CSS</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+<div class="skills__data" data-percent="15">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Javascript</h3>
+    <span class="skills__level">Beginner</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+<div class="skills__data" data-percent="25">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Python</h3>
+    <span class="skills__level">Beginner</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+ 
+        <div class="skills__data" data-percent="75">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Film Making</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>                    
+                        
+                        </div>
+                        <div class="skills__group">
+                              <div class="skills__data" data-percent="50">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Wordpress</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div> 
+                            <div class="skills__data" data-percent="65">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Excel</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div> 
+                       <div class="skills__data" data-percent="55">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Power Point</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>      
+<div class="skills__data" data-percent="95">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Canva</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>      
+
+                  <div class="skills__data" data-percent="65">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Lightroom</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>             
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Knowledgeable skills</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data" data-percent="85">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">communication</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+
+                          <!-- Robotics Skill -->
+<div class="skills__data" data-percent="70">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Robotics</h3>
+    <span class="skills__level">Intermediate</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+<div class="skills__data" data-percent="85">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Story Writing</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+<div class="skills__data" data-percent="90">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Event management</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+                 </div>
+                        
+                 <div class="skills__group">
+                            <div class="skills__data" data-percent="90">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Event Planing</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+
+                             <div class="skills__data" data-percent="80">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Leadership</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+                            <div class="skills__data" data-percent="80">
+  <i class='bx bxs-badge-check'></i>
+
+  <div>
+    <h3 class="skills__name">Problem solving</h3>
+    <span class="skills__level">Advanced</span>
+
+    <!-- Progress Bar -->
+    <div class="skills__bar">
+      <div class="skills__percentage"></div>
+    </div>
+
+    <!-- Percentage Text -->
+    <span class="skills__percent-text">0%</span>
+  </div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <!--=============== Education ===============-->
+        <section class="Education section">
+            <span class="section__subtitle">My Education</span>
+            <h2 class="section__title">A Boring Life</h2>
+
+            <div class="services__container container grid">
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title"> School <br> Maestro </h3>
+
+                        <span class="services__button" style="text-align: right;">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                    </div>
+
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">My School</h3>
+
+                            <p class="services__modal-description">
+                                Every boy finds school classes in his life very boring, and I was no different from them. Due to changing schools in different places during my school life, I got to know people from various environments and different societies. Traveling to different places taught me a lot.                            
+                            </p>
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        A Alim Academy</p></br>                                                                                                    
+                                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                                    <div class="services__modal">
+                                       <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">A Alim Academy</h3>
+
+                            <p class="services__modal-description">
+                                My school life started at A Alim Academy. Since my mother was a senior teacher at the school, 
+                                all the teachers treated me with great affection. I studied there up to playgroup and nursery.                               
+                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                             
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                       Hazi Nagar pre-cadet Highschool & College
+                                    </p></br>                                                                                                    
+                                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                                    <div class="services__modal">
+                                       <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Hazi Nagar pre-cadet Highschool & College</h3>
+
+                            <p class="services__modal-description">
+                                After leaving my village home, I moved to Dhaka and got admitted to Haji Nagar Pre-Cadet High School and College. My mother’s elder sister’s daughter — whom I lovingly called Bubu — was a teacher there. I studied at that school from class one to class five, creating some of my earliest and fondest memories of life.                               
+                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        JK & HK Highschool And college
+                                    </p></br>                                                                                                    
+                                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                                    <div class="services__modal">
+                                       <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">  JK & HK Highschool And college</h3>
+
+                            <p class="services__modal-description">
+                                In 2018, I moved from Dhaka to Habiganj and got admitted to this school in class six. Because of the move from Dhaka to Habiganj, I had to take a one-year break from my studies. 
+                                I completed my SSC from this school in 2023. My school life — those six years — was perhaps one of the most wonderful chapters of my life.                              
+                            </p>
+                                        </div>
+                                    </div>
+                                </li>               
+                            </ul>
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">College <br> nightmare</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Abdul kadir Mollah city college</h3>
+
+                            <p class="services__modal-description">
+                               This college entered my life in quite a dramatic way. My time here brought not only academic growth but, more importantly, significant personal and moral development. 
+                               I’m deeply grateful to all my teachers, who taught me something valuable in one way or another. 
+                               Describing my batchmates in just a few words is impossible — they were truly the best. I studied here from 2023 to 2025 and graduated with an honorable result in my HSC examination.
+                            </p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title">University <br> Callinng</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Versity Loading...</h3>
+                              <div class="services__modal-video">
+        <div class="services__modal-video-wrapper">
+  <script
+    src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
+    type="module"
+  ></script>
+
+  <dotlottie-wc
+    src="https://lottie.host/20d1b021-820a-4fda-8df4-50659a82fd84/osaDTYkPVx.lottie"
+    style="width: 300px; height: 300px;"
+    autoplay
+    loop
+  ></dotlottie-wc>
+</div>
+
+
+                            <p class="services__modal-description">
+                                Insha Allah
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== WORK ===============-->
+        <section class="work section" id="work">
+            <span class="section__subtitle">My Portfolio</span>
+            <h2 class="section__title">My Works</h2>
+
+            <div class="work__filters">
+                <span class="work__item active-work" data-filter='all'>All</span>
+                <span class=" work__item" data-filter='.web'>Web</span>
+                <span class=" work__item" data-filter='.movil'>Movil</span>
+                <span class=" work__item" data-filter='.design'>Design</span>
+            </div>
+
+            <div class="work__container container grid">
+                <div class="work__card mix web">
+                    <img src="assets/img/work1.jpg" alt="" class="work__img">
+
+                    <h3 class="work__title">Web Design</h3>
+
+                    
+                        <!-- Your card -->
+<li class="services__card">
+  <div class="services__content">
+    <span class="services__button">
+      Demo <i class='bx bx-right-arrow services__icon'></i>
+    </span>
+  </div>
+</li>
+
+<!-- Modal: outside the li -->
+<div class="services__modal">
+  <div class="services__modal-content">
+    <i class='bx bx-x services__modal-close'></i>
+    <h3 class="services__modal-title">My websites</h3>
+    <div class="services__video-wrapper"></div>
+    <p class="services__modal-description">
+      Description of your website or content goes here.
+    </p>
+  </div>
+  </div>
+
+
+
+
+
+                                
+                </div>
+
+                <div class="work__card mix movil">
+                    <img src="assets/img/work2.jpg" alt="" class="work__img">
+
+                    <h3 class="work__title">App Movil</h3>
+
+                    <!-- Your card -->
+<li class="services__card">
+  <div class="services__content">
+    <span class="services__button">
+      Demo <i class='bx bx-right-arrow services__icon'></i>
+    </span>
+  </div>
+</li>
+
+<!-- Modal: outside the li -->
+<div class="services__modal">
+  <div class="services__modal-content">
+    <i class='bx bx-x services__modal-close'></i>
+    <h3 class="services__modal-title">My websites</h3>
+    <div class="services__video-wrapper"></div>
+    <p class="services__modal-description">
+      Description of your website or content goes here.
+    </p>
+  </div>
+ 
+                </div>
+  </div>
+
+                <div class="work__card mix design">
+                    <img src="assets/img/work3.jpg" alt="" class="work__img">
+
+                    <h3 class="work__title">Brand Design</h3>
+
+                    <!-- Your card -->
+<li class="services__card">
+  <div class="services__content">
+    <span class="services__button">
+      Demo <i class='bx bx-right-arrow services__icon'></i>
+    </span>
+  </div>
+</li>
+
+<!-- Modal: outside the li -->
+<div class="services__modal">
+  <div class="services__modal-content">
+    <i class='bx bx-x services__modal-close'></i>
+    <h3 class="services__modal-title">My websites</h3>
+    <div class="services__video-wrapper"></div>
+    <p class="services__modal-description">
+      Description of your website or content goes here.
+    </p>
+  </div>
+
+                </div>
+  </div>
+
+                <div class="work__card mix web">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+
+                    <h3 class="work__title">Web Design</h3>
+
+                    <!-- Your card -->
+<li class="services__card">
+  <div class="services__content">
+    <span class="services__button">
+      Demo <i class='bx bx-right-arrow services__icon'></i>
+    </span>
+  </div>
+</li>
+
+<!-- Modal: outside the li -->
+<div class="services__modal">
+  <div class="services__modal-content">
+    <i class='bx bx-x services__modal-close'></i>
+    <h3 class="services__modal-title">My websites</h3>
+    <div class="services__video-wrapper"></div>
+    <p class="services__modal-description">
+      Description of your website or content goes here.
+    </p>
+  </div>
+
+                </div>
+  </div>
+
+                <div class="work__card mix movil">
+                    <img src="assets/img/work5.jpg" alt="" class="work__img">
+
+                    <h3 class="work__title">App Movil</h3>
+
+                    <!-- Your card -->
+<li class="services__card">
+  <div class="services__content">
+    <span class="services__button">
+      Demo <i class='bx bx-right-arrow services__icon'></i>
+    </span>
+  </div>
+</li>
+
+<!-- Modal: outside the li -->
+<div class="services__modal">
+  <div class="services__modal-content">
+    <i class='bx bx-x services__modal-close'></i>
+    <h3 class="services__modal-title">My websites</h3>
+    <div class="services__video-wrapper"></div>
+    <p class="services__modal-description">
+      Description of your website or content goes here.
+    </p>
+  </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--=============== TESTIMONIALS ===============-->
+        <section class="testimonial section">
+            <span class="section__subtitle">My</span>
+            <h2 class="section__title">Testimonials</h2>
+
+            <div class="testimonial__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <img src="assets/img/testimonial1.jpeg" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">AK Jisan</h3>
+                        <p class="testimonial__description">
+                            creative and thoughtful.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="assets/img/testimonial1.jpeg" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">AK Jisan</h3>
+                        <p class="testimonial__description">
+                       
+                            Very creative and thoughtful. 
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="assets/img/testimonial1.jpeg" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">AK Jisan</h3>
+                        <p class="testimonial__description">
+
+                            Very creative and thoughtful.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+            <sapn class="section__subtitle">Get in touch</sapn>
+            <h3 class="section__title">Contact Me</h3>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-info">Talk to me</h3>
+
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">yusufhasanaditta@gmail.com</span>
+
+                            <a href="mailto:yusufhasanaditta@gmail.com" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">01927820702</span>
+
+                            <a href="https://api.whatsapp.com/send?phone=+8801927820702&text=Hey there!" target="_blank"
+                                class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-twitter contact__card-icon'></i>
+                            <h3 class="contact__card-title">Twitter</h3>
+                            <span class="contact__card-data">yusuf</span>
+
+                            <a href="https://twitter.com/" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-form">Write Me your Message</h3>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Name</label>
+                            <input type="text" placeholder="Enter name" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Mail</label>
+                            <input type="text" placeholder="Enter email" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="" class="contact__form-tag">Message</label>
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Write your Message"
+                                class="contact__form-input "></textarea>
+                        </div>
+
+
+                        <button class="button">
+                            Send Message
+                        </button>
+                    </form>
+
+                </div>
+
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Aditta</h1>
+
+            <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#skills" class="footer__link">Skills</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#work" class="footer__link">Work</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#contact" class="footer__link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="#" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                &#169; 
+            </span>
+        </div>
+    </footer>
+
+    <!--=============== SCROLLREVEAL ===============-->
+
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
